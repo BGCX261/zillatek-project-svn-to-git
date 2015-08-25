@@ -1,0 +1,101 @@
+<?php
+
+// legal URL: /pictures/IMG_8963.jpg
+
+$statdata = array (
+  0 => 3,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 3,
+  7 => 244201,
+  8 => 1318070270,
+  9 => 1314911316,
+  10 => 1318070270,
+  11 => -1,
+  12 => -1,
+  'dev' => 3,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 3,
+  'size' => 244201,
+  'atime' => 1318070270,
+  'mtime' => 1314911316,
+  'ctime' => 1318070270,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.8.5-20110218',
+    'filesize' => 244201,
+    'avdataoffset' => 0,
+    'avdataend' => 244201,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 940,
+      'resolution_y' => 627,
+      'compression_ratio' => 0.13811180110172,
+    ),
+    'encoding' => 'UTF-8',
+    'filename' => 'IMG_8963.jpg',
+    'filepath' => 'D:/www/ionize/files/pictures',
+    'filenamepath' => 'D:/www/ionize/files/pictures/IMG_8963.jpg',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/27/19f1_IMG_8963994f8f83191e6964af7ecb82e-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 334,
+    2 => 2,
+    3 => 'width="500" height="334"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/27/19f1_IMG_8963994f8f83191e6964af7ecb82e-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'file_info_dump' => 
+  array (
+    'filesize' => 244201,
+    'AV data offset' => 0,
+    'AV data end' => 244201,
+    'file format' => 'jpg',
+    'video' => 
+    array (
+      'data format' => 'jpg',
+      'lossless' => false,
+      'bits per sample' => 24,
+      'pixel aspect ratio' => 1,
+      'resolution x' => 940,
+      'resolution y' => 627,
+      'compression ratio' => 0.13811180110172,
+    ),
+    'encoding' => 'UTF-8',
+    'mime type' => 'image/jpeg',
+  ),
+);

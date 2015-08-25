@@ -1,0 +1,105 @@
+<div class ="topic_form">
+    <div class ="insert_title">Quản lý chủ đề</div>
+    <div class ="manage_comp">
+        <form action ="<?php echo $this->baseUrl()?>/topic/insert" method ="post">
+        <table width="390" cellspacing="0" cellpadding="0" border="0" class ="commonTable">
+            <tr>
+                <th colspan ="2">Nhập chủ đề mới</th>
+            </tr>
+             <?php if (isset($this->message['insert']) && $this->message['insert']) : ?>
+            <tr>
+                <td colspan ="2">
+                    <div class ="error">
+                        <?php echo $this->message['insert']; ?>
+                    </div>
+                </td>
+            </tr>
+            <?php endif ?>
+
+            <tr>
+                <td> Tên chủ đề * </td>
+                <td>
+                    <input id ="name" type ="text" class ="small_input"  name ="name" value ="<?php if (isset($this->data['name'])) echo $this->data['name'] ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td>Thuộc nhóm chủ đề </td>
+                <td>
+                    <?php if ($this->topicGroup) : ?>
+                    <select name ="topic_group_id">
+                        <?php foreach ($this->topicGroup as $topicGroup) : ?>
+                            <?php
+                            $select = "";
+                            if (isset ($this->data['topic_group_id']) && $this->data['topic_group_id'] == $topicGroup->id ){
+                                $select = ' selected = "selected"';
+                            }
+                            ?>
+                        <option value ="<?php echo $topicGroup->id ?>" <?php echo $select ?>><?php echo $topicGroup->name ?></option>
+                        <?php endforeach ?>
+                    </select>
+                    <?php endif ?>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp; </td>
+                <td  align ="center">
+                    <input type ="submit" name ="submit" value ="Nhập" />
+                </td>
+            </tr>
+        </table>
+     </form>
+  </div>
+<div class ="manage_comp">   
+    <table width="390" cellspacing="0" cellpadding="0" border="0" class ="commonTable">
+        <tr>
+            <th colspan ="2">Các chủ đề</th>
+        </tr>
+         <?php if (isset($this->message['manage']) && $this->message['manage']) : ?>
+        <tr>
+            <td colspan ="2">
+                <div class ="error">
+                    <?php echo $this->message['manage']; ?>
+                </div>
+            </td>
+        </tr>
+        <?php endif ?>
+
+        <tr>
+            <td colspan ="2">
+                <div class ="all_group_topic">
+                    <ul>
+                     <?php foreach ($this->groupAndTopic as $group) : ?>
+                        <li><?php echo $group['name'] ?></li>
+                        <ul>
+                            <?php foreach ($group['topics'] as $topic) :?>
+                            <li>
+                                <span  id ="span_edit_tp_<?php echo $topic['id']?>"><?php echo $topic['name']?></span>
+                                | <a style ="cursor:pointer" id ="tp_<?php echo $topic['id']?>" class ="topicIterm">Sửa</a>
+                                | <a href ="<?php echo $this->baseUrl()?>/topic/delete/?id=<?php echo $topic['id']?>" class ="deleteConfirm">
+                                    Xóa
+                                </a>
+                                <ul style ="display: none" id ="edit_ul_tp_<?php echo $topic['id']?>">
+                                    <li>
+                                        <input type ="hidden" id ="id_edit_tp_<?php echo $topic['id']?>" name ="id_edit_tp_<?php echo $topic['id']?>" value ="<?php echo $topic['id']?>" />
+                                        <input type ="text" class ="input_edit" id ="input_edit_tp_<?php echo $topic['id']?>" name ="input_edit_tp_<?php echo $topic['id']?>" value ="<?php echo $topic['name']?>" />
+                                        <input type ="button" class ="button_edit_tp_name" id ="edit_tp_<?php echo $topic['id']?>" value ="Sửa" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <?php endforeach ?>
+                        </ul>
+                    <?php endforeach ?>
+                    </ul>
+                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+<div class ="clear"> </div>

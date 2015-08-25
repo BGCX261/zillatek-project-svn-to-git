@@ -1,0 +1,19 @@
+<?php
+echo $this->doctype('HTML4_LOOSE');
+?>
+<html>
+<head>
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta()    ?>
+<?php echo $this->headLink()  ?>
+<?php echo $this->headScript() ?>
+</head>
+<body>
+<h2>Manage layout</h2>
+<div id='content'><?php
+
+echo $this->layout()->content;
+
+?></div>
+</body>
+</html>

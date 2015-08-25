@@ -1,0 +1,303 @@
+<?php
+
+// legal URL: /website/icon-phone.png
+
+$statdata = array (
+  0 => 3,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 3,
+  7 => 1149,
+  8 => 1318070271,
+  9 => 1314911316,
+  10 => 1318070271,
+  11 => -1,
+  12 => -1,
+  'dev' => 3,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 3,
+  'size' => 1149,
+  'atime' => 1318070271,
+  'mtime' => 1314911316,
+  'ctime' => 1318070271,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/png',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.8.5-20110218',
+    'filesize' => 1149,
+    'avdataoffset' => 0,
+    'avdataend' => 1149,
+    'fileformat' => 'png',
+    'video' => 
+    array (
+      'dataformat' => 'png',
+      'lossless' => false,
+      'resolution_x' => 22,
+      'resolution_y' => 31,
+      'bits_per_sample' => 32,
+      'compression_ratio' => 0.42118768328446,
+    ),
+    'tags' => 
+    array (
+      'png' => 
+      array (
+        'Software' => 
+        array (
+          0 => 'Adobe ImageReady',
+        ),
+      ),
+    ),
+    'encoding' => 'UTF-8',
+    'filename' => 'icon-phone.png',
+    'filepath' => 'D:/www/ionize/files/website',
+    'filenamepath' => 'D:/www/ionize/files/website/icon-phone.png',
+    'mime_type' => 'image/png',
+    'png' => 
+    array (
+      'IHDR' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 13,
+          'type_text' => 'IHDR',
+          'type_raw' => 1229472850,
+          'data' => '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 3820699123,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+        ),
+        'width' => 22,
+        'height' => 31,
+        'raw' => 
+        array (
+          'bit_depth' => 8,
+          'color_type' => 6,
+          'compression_method' => 0,
+          'filter_method' => 0,
+          'interlace_method' => 0,
+        ),
+        'compression_method_text' => 'deflate/inflate',
+        'color_type' => 
+        array (
+          'palette' => false,
+          'true_color' => true,
+          'alpha' => true,
+        ),
+      ),
+      'tEXt' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 25,
+          'type_text' => 'tEXt',
+          'type_raw' => 1950701684,
+          'data' => 'Software' . "\0" . 'Adobe ImageReady',
+          'crc' => 1909024060,
+          'flags' => 
+          array (
+            'ancilliary' => true,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => true,
+          ),
+        ),
+        'keyword' => 'Software',
+        'text' => 'Adobe ImageReady',
+      ),
+      'comments' => 
+      array (
+        'Software' => 
+        array (
+          0 => 'Adobe ImageReady',
+        ),
+      ),
+      'IDAT' => 
+      array (
+        0 => 
+        array (
+          'header' => 
+          array (
+            'data_length' => 1055,
+            'type_text' => 'IDAT',
+            'type_raw' => 1229209940,
+            'crc' => 71943982,
+            'flags' => 
+            array (
+              'ancilliary' => false,
+              'private' => false,
+              'reserved' => false,
+              'safe_to_copy' => false,
+            ),
+          ),
+        ),
+      ),
+      'IEND' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 0,
+          'type_text' => 'IEND',
+          'type_raw' => 1229278788,
+          'crc' => 2923585666,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+          'data' => '',
+        ),
+      ),
+      'encoding' => 'UTF-8',
+    ),
+    'tags_html' => 
+    array (
+      'png' => 
+      array (
+        'Software' => 
+        array (
+          0 => 'Adobe ImageReady',
+        ),
+      ),
+    ),
+  ),
+  'mime_type from file extension' => 'image/png',
+  'thumb250_direct' => '/ionize/files/.thumbs/9d/f40b_icon_phone13c575dea5b3957c9f5d870-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 22,
+    1 => 31,
+    2 => 3,
+    3 => 'width="22" height="31"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/9d/f40b_icon_phone13c575dea5b3957c9f5d870-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 22,
+    1 => 31,
+    2 => 3,
+    3 => 'width="22" height="31"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'file_info_dump' => 
+  array (
+    'filesize' => 1149,
+    'AV data offset' => 0,
+    'AV data end' => 1149,
+    'file format' => 'png',
+    'video' => 
+    array (
+      'data format' => 'png',
+      'lossless' => false,
+      'resolution x' => 22,
+      'resolution y' => 31,
+      'bits per sample' => 32,
+      'compression ratio' => 0.42118768328446,
+    ),
+    'tags.png.Software.0' => 'Adobe ImageReady',
+    'encoding' => 'UTF-8',
+    'mime type' => 'image/png',
+    'png.IHDR.header' => 
+    array (
+      'data length' => 13,
+      'type text' => 'IHDR',
+      'type raw' => 1229472850,
+      'data' => '      ',
+      'crc' => 3820699123,
+      'flags' => 
+      array (
+        'ancilliary' => false,
+        'private' => false,
+        'reserved' => false,
+        'safe to copy' => false,
+      ),
+    ),
+    'png.IHDR.width' => 22,
+    'png.IHDR.height' => 31,
+    'png.IHDR.raw' => 
+    array (
+      'bit depth' => 8,
+      'color type' => 6,
+      'compression method' => 0,
+      'filter method' => 0,
+      'interlace method' => 0,
+    ),
+    'png.IHDR.compression method text' => 'deflate/inflate',
+    'png.IHDR.color type' => 
+    array (
+      'palette' => false,
+      'true color' => true,
+      'alpha' => true,
+    ),
+    'png.tEXt.header' => 
+    array (
+      'data length' => 25,
+      'type text' => 'tEXt',
+      'type raw' => 1950701684,
+      'data' => 'Software Adobe ImageReady',
+      'crc' => 1909024060,
+      'flags' => 
+      array (
+        'ancilliary' => true,
+        'private' => false,
+        'reserved' => false,
+        'safe to copy' => true,
+      ),
+    ),
+    'png.tEXt.keyword' => 'Software',
+    'png.tEXt.text' => 'Adobe ImageReady',
+    'png.comments.Software.0' => 'Adobe ImageReady',
+    'png.IDAT.0.header' => 
+    array (
+      'data length' => 1055,
+      'type text' => 'IDAT',
+      'type raw' => 1229209940,
+      'crc' => 71943982,
+      'flags' => 
+      array (
+        'ancilliary' => false,
+        'private' => false,
+        'reserved' => false,
+        'safe to copy' => false,
+      ),
+    ),
+    'png.IEND.header' => 
+    array (
+      'data length' => 0,
+      'type text' => 'IEND',
+      'type raw' => 1229278788,
+      'crc' => 2923585666,
+      'flags' => 
+      array (
+        'ancilliary' => false,
+        'private' => false,
+        'reserved' => false,
+        'safe to copy' => false,
+      ),
+      'data' => '',
+    ),
+    'png.encoding' => 'UTF-8',
+    'tags html.png.Software.0' => 'Adobe ImageReady',
+  ),
+);

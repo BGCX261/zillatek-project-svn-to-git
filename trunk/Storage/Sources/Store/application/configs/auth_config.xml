@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<configdata>
+    <noauth>
+        <module>default</module>
+        <controller>login</controller>
+        <action>index</action>
+    </noauth>
+	
+    <noacl>
+        <module>error</module>
+        <controller>index</controller>
+        <action>index</action>
+    </noacl>
+	
+    <noadmin>
+        <module>admin</module>
+        <controller>index</controller>
+        <action>login</action>
+    </noadmin>
+</configdata>

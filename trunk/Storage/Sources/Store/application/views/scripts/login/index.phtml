@@ -1,0 +1,30 @@
+<div class="content_inner">
+    <div class="cont_title">
+        <h1 class="pageName">Đăng nhập</h1>
+    </div>
+    <div class="contain">
+        <div class="left_col">
+            <h3 class="title">Thông tin đăng nhập</h3>
+            <?php if( isset($this->message) && $this->message) : ?>
+		<li class ="error">
+                    <?php echo $this->message ?>
+                </li>
+                <?php endif; ?>
+                <?php
+                    $this->form->setAction($this->url(array('action' => 'process')));
+                    echo $this->form;
+                ?>
+        </div>
+        <div class="right_col">
+            <h3>Bạn chưa có tài khoản?
+                <p>
+                <a href="<?php echo $this->baseUrl()?>/register/">Hãy nhấn vào đây để đăng ký</a>
+                </p>
+            </h3>
+            <div style="text-align: center;"><img src="<?php echo $this->baseUrl() . "/themes/" . $this->cur_theme ?>/images/account.png" /></div>
+            <h4>Still have question? <button class="tour_btn">Take a tour</button></h4>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!-- InstanceEndEditable -->
+</div>

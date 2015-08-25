@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Store system</title>
+        <link rel="stylesheet" href="<?php echo $this->baseUrl() . "/themes/" . $this->cur_theme ?>/css/styles.css" />
+        <link rel="stylesheet" href="<?php echo $this->baseUrl() . "/themes/" . $this->cur_theme ?>/css/jquery-ui.custom.css" />
+        <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/js/jquery/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/js/jquery/jquery-ui.custom.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/js/custom.js"></script>
+        <script type ="text/javascript" src="<?php echo $this->baseUrl() ?>/js/menu/menu.js"></script>
+    </head>
+    <body>
+        <div id="main_wrap">
+            <div id ="top_header">
+                <div id ="top_menu">
+                    <div style ="width: 50%; float: left; font-size: 12px; text-align: left;">
+                            <?php if ($this->userId == 0): ?>
+                                <a href = '<?php echo $this->baseUrl()?>/login/index'>Đăng nhập</a> |
+                                <a href = '<?php echo $this->baseUrl()?>/register/index'>Đăng ký</a>
+                            <?php else: ?>
+                                Xin chào <a href= "#"><?php echo $this->username ?></a> |
+                                <a href = '<?php echo $this->baseUrl()?>/login/logout'>Thoát</a>
+                            <?php endif ?>
+                          
+                    </div>
+                    <div style ="width: 50%; float: right;">
+                        
+                        <a href ="/index/index">Home</a>
+                    </div>
+                    <div class ="clear"></div>
+                </div>
+            </div>
+            
+            <div id="wrap_content">
+                <div id ="inner_banner">
+                    <div id ="logo">
+                        <span class ="store">Store</span><span class ="iz">IZ</span>
+                        <div class ="slogan">Storing is easy</div>
+                    </div>
+                    <div id ="banner">
+
+                    </div>
+                    <div id ="user_action">
+                        <?php if ($this->userId == 0) : ?>
+                        <form enctype="application/x-www-form-urlencoded" action="<?php echo $this->baseUrl()?>/login/process" method="post">
+                            <div class="top_login_form">
+                                <br/>
+                                <input type="text" name="username" value="Email" onfocus="if(this.value == 'Email') this.value ='';"  onblur="if(this.value == '') this.value ='Email';"/>
+                               <br/>
+                                    <input type="password" name="password" value="" style="background: url(/themes/default/images/pwd_bg.jpg) no-repeat;" onfocus="this.style.background ='none';"  onblur="if(this.value == '') this.style.background  ='url(/themes/default/images/pwd_bg.jpg) no-repeat';"/>
+                                <br/>
+                                    <input type="submit" name="login" id="login" value="Login"/>
+                               
+                            </div>
+                        </form>
+
+                        <?php endif ?>
+                    </div>
+                    <div class ="clear"></div>
+                </div>
+                <div class="search_bar">
+                <div style ="float: left; width: 40%; padding-bottom: 5px;">
+                        <script type ="text/javascript">
+                        function doSearch()
+                        {
+                            var kwd = $('#keyword').val();
+                            if (kwd == "") {
+                                alert("Bạn phải nhập từ khóa để tìm kiếm");
+                                return false;
+                            }
+                            return true;
+                        }
+                        </script>
+                        <form action ="<?php echo $this->baseUrl()?>/search/do-search" onsubmit ="return doSearch();" method ="get">
+                            <input type ="text" id ="keyword" name ="keyword" value ="<?php if (isset($this->keyword)) echo $this->keyword?>" />
+                            <input type ="submit" value ="Tìm kiếm" />
+                        </form>
+                    </div>
+                 <?php if ($this->userId > 0): ?>
+                    <div style ="text-align:right; float: right; width:50%">
+                        <button class="button small blue" onclick ="window.location = '/article/insert';"><span><ins>Nhập bài viết mới</ins></span></button>
+                    </div>
+                    <?php endif ?>
+                    <div style ="clear: both;"> </div>
+                </div>
+                <div id ="user_menu">
+                    <?php echo $this->userMenu ?>
+                </div>
+                <div style ="clear: both;"></div>
+                <div id="content" class="box_shadow">
+                    <?php
+                        echo $this->layout()->content;
+                    ?>
+                </div>
+                
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>        
+    </body>
+</html>

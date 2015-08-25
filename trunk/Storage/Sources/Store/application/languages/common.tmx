@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="2.0" xmlns="http://www.lisa.org/tmx20">
+  <header adminlang="en" creationtool="locale4j" creationtoolversion="1.1" o-tmf="unknown" segtype="block" srclang="*all*"/>
+  <body>
+    <tu tuid="02_welcome">
+      <tuv xml:lang="en">
+        <seg>Welcome</seg>
+      </tuv>
+      <tuv xml:lang="vi">
+        <seg>Xin chào </seg>
+      </tuv>
+    </tu>
+    <tu tuid="pagin_of">
+      <tuv xml:lang="en">
+        <seg>of</seg>
+      </tuv>
+      <tuv xml:lang="vi">
+        <seg>của</seg>
+      </tuv>
+    </tu>
+    <tu tuid="pagin_first">
+      <tuv xml:lang="en">
+        <seg>first</seg>
+      </tuv>
+      <tuv xml:lang="vi">
+        <seg>đầu</seg>
+      </tuv>
+    </tu>
+    <tu tuid="pagin_previous">
+      <tuv xml:lang="en">
+        <seg>previous</seg>
+      </tuv>
+      <tuv xml:lang="vi">
+        <seg>trước</seg>
+      </tuv>
+    </tu>
+    <tu tuid="pagin_next">
+      <tuv xml:lang="en">
+        <seg>next</seg>
+      </tuv>
+      <tuv xml:lang="vi">
+        <seg>sau</seg>
+      </tuv>
+    </tu>
+    <tu tuid="pagin_last">
+      <tuv xml:lang="en">
+        <seg>last</seg>
+      </tuv>
+      <tuv xml:lang="vi">
+        <seg>cuối</seg>
+      </tuv>
+    </tu>
+    
+  </body>
+</tmx>

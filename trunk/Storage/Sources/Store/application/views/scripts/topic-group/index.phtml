@@ -1,0 +1,85 @@
+<div class ="topic_form">
+    <div class ="insert_title">Quản nhóm lý chủ đề</div>
+    <div class ="manage_comp">
+        <form action ="<?php echo $this->baseUrl()?>/topic-group/insert" method ="post">
+        <table width="390" cellspacing="0" cellpadding="0" border="0" class ="commonTable">
+            <tr>
+                <th colspan ="2">Nhập nhóm chủ đề mới</th>
+            </tr>
+             <?php if (isset($this->message['insert']) && $this->message['insert']) : ?>
+            <tr>
+                <td colspan ="2">
+                    <div class ="error">
+                        <?php echo $this->message['insert']; ?>
+                    </div>
+                </td>
+            </tr>
+            <?php endif ?>
+
+            <tr>
+                <td> Tên nhóm chủ đề * </td>
+                <td>
+                    <input id ="name" type ="text" class ="small_input"  name ="name" value ="<?php if (isset($this->data['name'])) echo $this->data['name'] ?>" />
+                </td>
+            </tr>
+            
+            <tr>
+                <td>&nbsp; </td>
+                <td  align ="center">
+                    <input type ="submit" name ="submit" value ="Nhập" />
+                </td>
+            </tr>
+        </table>
+     </form>
+  </div>
+<div class ="manage_comp">
+    
+    <table width="390" cellspacing="0" cellpadding="0" border="0" class ="commonTable">
+        <tr>
+            <th colspan ="2">Các nhóm chủ đề</th>
+        </tr>
+         <?php if (isset($this->message['manage']) && $this->message['manage']) : ?>
+        <tr>
+            <td colspan ="2">
+                <div class ="error">
+                    <?php echo $this->message['manage']; ?>
+                </div>
+            </td>
+        </tr>
+        <?php endif ?>
+
+        <tr>
+            <td colspan ="2">
+                <div class ="all_group_topic">
+                    <ul>
+                     <?php foreach ($this->topicGroup as $group) : ?>
+                        <li><span id = "span_edit_gtp_<?php echo $group['id']?>"><?php echo $group['name'] ?></span>
+                            | <a style ="cursor:pointer" id ="tp_<?php echo $group['id']?>" class ="topicIterm">Sửa</a>
+                            | <a href ="<?php echo $this->baseUrl()?>/topic-group/delete/?id=<?php echo $group['id']?>" class ="deleteConfirm">
+                                Xóa
+                            </a>
+                            <ul style ="display: none" id ="edit_ul_tp_<?php echo $group['id']?>">
+                                <li>
+                                    <input type ="hidden" id ="id_edit_gtp_<?php echo $group['id']?>" name ="id_edit_tp_<?php echo $group['id']?>" value ="<?php echo $group['id']?>" />
+                                    <input type ="text" class ="input_edit" id ="input_edit_gtp_<?php echo $group['id']?>" name ="input_edit_tp_<?php echo $group['id']?>" value ="<?php echo $group['name']?>" />
+                                    <input type ="button" class ="button_edit_group_tp" id ="edit_gtp_<?php echo $group['id']?>" value ="Sửa" />
+                                </li>
+                            </ul>
+                       </li>
+                    <?php endforeach ?>
+                    </ul>
+                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+
+            </td>
+
+        </tr>
+    </table>
+
+</div>
+</div>
+<div class ="clear"> </div>

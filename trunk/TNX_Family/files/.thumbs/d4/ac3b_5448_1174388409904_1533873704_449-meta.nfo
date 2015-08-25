@@ -1,0 +1,101 @@
+<?php
+
+// legal URL: /5448_1174388409904_1533873704_449813_2735452_n.jpg
+
+$statdata = array (
+  0 => 3,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 3,
+  7 => 41415,
+  8 => 1318133157,
+  9 => 1318133433,
+  10 => 1318133157,
+  11 => -1,
+  12 => -1,
+  'dev' => 3,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 3,
+  'size' => 41415,
+  'atime' => 1318133157,
+  'mtime' => 1318133433,
+  'ctime' => 1318133157,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.8.5-20110218',
+    'filesize' => 41415,
+    'avdataoffset' => 0,
+    'avdataend' => 41415,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 604,
+      'resolution_y' => 374,
+      'compression_ratio' => 0.06111219322166,
+    ),
+    'encoding' => 'UTF-8',
+    'filename' => '5448_1174388409904_1533873704_449813_2735452_n.jpg',
+    'filepath' => 'D:/www/ionize/files',
+    'filenamepath' => 'D:/www/ionize/files/5448_1174388409904_1533873704_449813_2735452_n.jpg',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/d4/ac3b_5448_1174388409904_1533873704_449-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 442,
+    2 => 2,
+    3 => 'width="500" height="442"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/d4/ac3b_5448_1174388409904_1533873704_449-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 106,
+    2 => 2,
+    3 => 'width="120" height="106"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'file_info_dump' => 
+  array (
+    'filesize' => 41415,
+    'AV data offset' => 0,
+    'AV data end' => 41415,
+    'file format' => 'jpg',
+    'video' => 
+    array (
+      'data format' => 'jpg',
+      'lossless' => false,
+      'bits per sample' => 24,
+      'pixel aspect ratio' => 1,
+      'resolution x' => 604,
+      'resolution y' => 374,
+      'compression ratio' => 0.06111219322166,
+    ),
+    'encoding' => 'UTF-8',
+    'mime type' => 'image/jpeg',
+  ),
+);

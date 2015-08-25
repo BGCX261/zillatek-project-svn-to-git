@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<configdata>
+  
+    <resources>
+        <resource>default</resource>
+        <resource>manage</resource>
+        <resource>error</resource>
+    </resources>
+		
+    <roles>
+        <role>
+            <name>guest</name>
+            <inherit></inherit>
+        </role>
+        <role>
+            <name>member</name>
+            <inherit>guest</inherit>
+        </role>
+        <role>
+            <name>admin</name>
+            <inherit>member</inherit>
+        </role>
+    </roles>
+		
+    <allow_access>
+        <role_resource>
+            <role>guest</role>
+            <resource>error</resource>
+        </role_resource>
+        <role_resource>
+            <role>guest</role>
+            <resource>default</resource>
+        </role_resource>
+        <role_resource>
+            <role>guest</role>
+            <resource>manage</resource>
+        </role_resource>
+    </allow_access>
+</configdata>

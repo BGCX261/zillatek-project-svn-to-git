@@ -1,0 +1,79 @@
+<div id ="left_column">
+    <div id ="leftBlockTitle">
+        <div class ="block_title">
+            <?php echo $this->topicInfo->name ?>
+        </div>
+    </div>
+
+    <div class ="listTopicArticle">
+        <?php if (!empty($this->listArticleOfTopic)) : ?>
+                <ul>
+            <?php foreach ($this->listArticleOfTopic as $article): ?>
+                    <li>
+                        <a href ="<?php echo $this->baseUrl() ?>/article/view/?tpid=<?php echo $article['topic_id'] ?>&id=<?php echo $article['id'] ?>">
+                            <font color ="red">&rArr;</font><?php echo $article['title'] ?>
+                        </a>
+                    </li>
+            <?php endforeach; ?>
+                </ul>
+        <?php
+                    if (isset($this->paginator)) {
+                        echo $this->paginationControl($this->paginator,
+                                'Sliding',
+                                'pagin/pagination_control.phtml');
+                    }
+        ?>
+        <?php endif ?>
+                </div>
+            </div>
+            <div id ="main_column">
+                <div id ="actionBlock">
+                    
+                    <div ><br/></div>
+        <?php if (sizeof($this->relativeArticles) > 0): ?>
+
+                        <div class ="block_title">
+                            <a class ="actButton">Các bài liên quan</a>
+                        </div>
+                        <div class ="block_link">
+                            <div class="content">
+                                <ul>
+                    <?php foreach ($this->listRelativeArticle as $reArticle) : ?>
+                            <li><a href ="<?php echo $this->baseUrl() ?>/article/view/id/<?php echo $reArticle['id'] ?>/tpid/<?php echo $reArticle['topic_id']; ?>"><?php echo $reArticle['title'] ?></a></li>
+                    <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+        <?php endif ?>
+                        </div>
+    <?php if ($this->article): ?>
+        <div class ="artice_title">
+            <?php echo $this->article->title ?>
+        </div>
+
+        <div class ="article_content">
+            <?php echo $this->article->content ?>
+        </div>
+        <div class ="post_date">
+            <?php if ($this->article->post_date != "0000-00-00") : ?>
+                  Đăng ngày: <?php echo $this->article->post_date ?>
+            <?php endif ?>
+         </div>
+        <div class ="article_actions">
+            <a href ="<?php $this->baseUrl()?>/article/edit/?id=<?php echo $this->article->id ?>&tpid=<?php echo $this->topicInfo->id ?>">
+                Chỉnh sửa
+            </a>
+            &nbsp; &nbsp;
+            <a class ="deleteConfirm" href ="<?php $this->baseUrl()?>/article/delete/?id=<?php echo $this->article->id ?>&tpid=<?php echo $this->topicInfo->id ?>">
+                Xóa
+            </a>
+        </div>
+    <?php else: ?>
+        <div class ="artice_title">
+            Chưa có bài viết nào.
+        </div>
+    <?php endif ?>
+
+</div>
+
+<div style ="clear: both"> </div>

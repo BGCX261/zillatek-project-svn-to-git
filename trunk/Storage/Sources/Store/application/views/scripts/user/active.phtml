@@ -1,0 +1,37 @@
+<script type ="text/javascript">
+    $(document).ready(function() {
+        $("#resend_active_link").click(function(){
+            $('#resend_active_form').slideToggle('normal');
+        });
+    });
+</script>
+
+<div class="content_inner">
+    <div class="cont_title">
+        <h1 class="pageName">Kích hoạt tài khoản</h1>
+    </div>
+
+    <div class ="error">
+        <?php if ($this->message) : ?>
+            <?php echo $this->message ?>
+        <?php endif ?>
+    </div>
+    
+    
+    <br/>
+    <div class ="resend_active">
+        <a style ="cursor: pointer;" id ="resend_active_link">Gửi lại mã kích hoạt</a>
+        <div class ="resend_active_form" id ="resend_active_form">
+            <form method ="post" action ="<?php echo $this->baseUrl()?>/user/resend-active">
+                <strong>Email của bạn</strong>: <input type ="text" name ="email" size ="35"/>
+                <input type ="submit" value ="Gửi mã kích hoạt"/>
+            </form>
+        </div>
+    </div>
+    <?php if (isset($this->openResend) && $this->openResend == true) : ?>
+    <script type ="text/javascript">
+        $('#resend_active_form').slideDown("nomal");
+    </script>
+    <?php endif ?>
+    <br/>
+</div>

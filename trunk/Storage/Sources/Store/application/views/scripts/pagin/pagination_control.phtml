@@ -1,0 +1,48 @@
+
+<?php if ($this->pageCount): ?>
+
+    <div class="paginationControl">
+
+    <?php echo $this->firstItemNumber; ?> - <?php echo $this->lastItemNumber; ?>
+
+    (<?php echo $this->totalItemCount; ?>)
+
+    <!-- First page link -->
+    <?php if (isset($this->previous)): ?>
+        <a href="<?php echo $this->url(array('page' => $this->first)); ?>">
+        <img border ="0" src ="<?php echo $this->baseUrl()?>/themes/default/images/first.jpg" />
+    </a> |
+
+   
+    <?php endif; ?>
+
+    <?php if (isset($this->previous)): ?>
+
+        <a href="<?php echo $this->url(array('page' => $this->previous)); ?>"><img border ="0" src ="<?php echo $this->baseUrl()?>/themes/default/images/previous.jpg" /></a> |
+
+    
+    <?php endif; ?>
+
+
+    <?php if (isset($this->next)): ?>
+
+        <a href="<?php echo $this->url(array('page' => $this->next)); ?>">
+
+                               <img border ="0" src ="<?php echo $this->baseUrl()?>/themes/default/images/next.jpg" /> 
+
+    </a>
+
+    <?php endif; ?>
+
+    <?php if (isset($this->next)): ?>
+ |
+        <a href="<?php echo $this->url(array('page' => $this->last)); ?>">
+               <img border ="0" src ="<?php echo $this->baseUrl()?>/themes/default/images/last.jpg" />
+    </a>
+
+   
+    <?php endif; ?>
+
+</div>
+
+<?php endif; ?>

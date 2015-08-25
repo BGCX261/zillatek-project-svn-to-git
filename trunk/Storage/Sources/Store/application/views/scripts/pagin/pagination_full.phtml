@@ -1,0 +1,83 @@
+<?php
+$registry = Zend_Registry::getInstance();
+$translate = $registry->get("translate");
+$url = VC_Utils_Url::getSelfUrl(array('page'));
+?>
+
+<?php if ($this->pageCount): ?>
+
+    <div class="paginationControl">
+
+    <?php echo $this->firstItemNumber; ?> - <?php echo $this->lastItemNumber; ?>
+
+    <?php echo $translate->_("pagin_of"); ?>
+    <?php echo $this->totalItemCount; ?>
+
+    <!-- First page link -->
+    - 
+    <?php $first = $translate->_("pagin_first"); ?>
+    <?php if (isset($this->previous)): ?>
+
+        <a href="<?php echo $url . "&page=". $this->first; ?>">
+
+        <?php echo $first ?>
+
+    </a> |
+
+    <?php else: ?>
+
+            <span class="disabled"><?php echo $first ?></span> |
+
+    <?php endif; ?>
+
+
+    <!-- Previous page link -->
+    <?php $prev = $translate->_("pagin_previous"); ?>
+    <?php if (isset($this->previous)): ?>
+
+        <a href="<?php echo $url . "&page=". $this->previous; ?>">
+
+            &lt; <?php echo $prev ?>
+
+        </a> |
+
+    <?php else: ?>
+
+            <span class="disabled">&lt; <?php echo $prev ?></span> |
+
+    <?php endif; ?>
+
+
+
+    <!-- Next page link -->
+    <?php $next = $translate->_("pagin_next"); ?>
+    <?php if (isset($this->next)): ?>
+
+        <a href="<?php echo $url . "&page=". $this->next; ?>">
+
+                               <?php echo $next ?>  &gt;
+
+    </a> |
+
+    <?php else: ?>
+
+            <span class="disabled"><?php echo $next ?> &gt;</span> |
+
+    <?php endif; ?>
+
+    <!-- Last page link -->
+    <?php $last = $translate->_("pagin_last"); ?>
+    <?php if (isset($this->next)): ?>
+
+        <a href="<?php echo $url . "&page=". $this->last; ?>">
+                                        <?php echo $last ?>
+    </a>
+
+    <?php else: ?>
+            <span class="disabled"><?php echo $last ?></span>
+
+    <?php endif; ?>
+
+</div>
+
+<?php endif; ?>
